@@ -1,0 +1,108 @@
+# ====================
+# Python-specific
+# ====================
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+*.egg
+pip-log.txt
+pip-wheel-metadata/
+build/
+dist/
+sdist/
+wheels/
+
+# ====================
+# Virtual Environment
+# ====================
+venv/
+env/
+.venv/
+
+# ====================
+# IDE & Editor Files
+# ====================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+# ====================
+# Jupyter Notebooks
+# ====================
+*.ipynb_checkpoints/
+
+# ====================
+# Testing & Coverage
+# ====================
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+.tox/
+.pytest_cache/
+nosetests.xml
+junit.xml
+
+# ====================
+# Dependency Directories
+# ====================
+site-packages/
+lib/
+lib64/
+
+# ====================
+# oneAPI & SYCL
+# ====================
+*.o
+*.obj
+*.so
+*.a
+*.d
+*.dep
+*.log
+*.tlog
+*.ilk
+*.pdb
+*.suo
+*.sdf
+*.opensdf
+build*/
+out*/
+bin/
+obj/
+
+# ====================
+# Project Output Files
+# ====================
+reactor_gpu_fast.png
+*.png
+*.pdf
+
+# ====================
+# Miscellaneous
+# ====================
+*.bak
+*.swp
+*~
+*.tmp
+temp/
+logs/
+*.log
+.cache/
+*.cache
+.sass-cache/
+
+# ====================
+# Sensitive Data
+# ====================
+.env
+*.key
+*.pem
+*.crt
+secrets/
+credentials/

@@ -43,23 +43,26 @@ Numerical solution using Euler's method:
 
 $$C[i] = C[i-1] - \frac{k_c a_c}{u} C[i-1] dz$$
 
+---
+The external surface area per unit volume is given by:
 
+$$a_c = \frac{6(1-\phi)}{d_p}$$
+
+Where: $\phi$ is the void fraction (porosity) and $d_p$ is the particle diameter
+
+---
 Grid spacing is defined as:
 
 $$dz = \frac{z}{N-1}$$
 
 Where z is the reactor length of 1.5 m and N = 50,000 (grid points)
 
-<br>
+---
+Miscellaneous : 
 
-The mass transfer coefficient is calculated using:
+The mass transfer coefficient can be calculated by:
 
 $$k_c = 0.6 \frac{D_{AB}^{2/3}}{v^{1/6}} \frac{u^{1/2}}{d_p^{1/2}}$$
 
 
-The external surface area per unit volume is given by:
-
-$$a_c = \frac{6(1-\phi)}{d_p}$$
-
-Where: $\phi$ is the void fraction (porosity) and $d_p$ is the particle diameter
 

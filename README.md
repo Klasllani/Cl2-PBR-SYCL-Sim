@@ -47,7 +47,5 @@ The external surface area per unit volume is given by:
 
 $$a_c = \frac{6(1-\phi)}{d_p}$$
 
-Where:
-- $\phi$ is the void fraction (porosity)
-- $d_p$ is the particle diameter
+Where: $\phi$ is the void fraction (porosity) and $d_p$ is the particle diameter
 

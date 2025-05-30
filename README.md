@@ -19,11 +19,23 @@ The concentration profile for species A in the reactor is given by:
 
 $$\frac{C_A}{C_{A0}} = (1 - X_A) = \exp\left(-\frac{k_c a_c z}{u}\right)$$
 
+- **C<sub>A</sub>**: Concentration of Cl₂ at position z in the reactor (mol/m³).
+- **C<sub>A0</sub>**: Initial Cl₂ concentration at the reactor inlet (mol/m³, typically 1.0 mol/m³).
+- **X<sub>A</sub>**: Conversion of Cl₂, representing the fraction of Cl₂ removed (dimensionless, e.g., 0.632 for Case 1, 0.98 for Case 2).
+- **k<sub>c</sub>**: Mass transfer coefficient, quantifying the rate of Cl₂ diffusion to the absorbent surface (m/s).
+- **a<sub>v</sub>**: External surface area of absorbent particles per unit reactor volume (m²/m³).
+- **z**: Axial position along the reactor length (m, ranging from 0 to 1.5 m).
+- **u**: Superficial gas velocity, proportional to the volumetric flow rate (m/s, e.g., 0.1 m/s for Case 1, 0.4 m/s for Case 2).
 
 The governing numerical differential equation:
 
 $$-u \frac{dC_A}{dz} = k_c a_c C_A$$
 
+- **u**: Superficial gas velocity (m/s), as defined above.
+- **C<sub>A</sub>**: Cl₂ concentration at position z (mol/m³), as defined above.
+- **dC<sub>A</sub>/dz**: Rate of change of Cl₂ concentration along the reactor length (mol/m⁴).
+- **k<sub>c</sub>**: Mass transfer coefficient (m/s), as defined above.
+- **a<sub>v</sub>**: External surface area per unit reactor volume (m²/m³), as defined above.
 
 Numerical solution using Euler's method:
 

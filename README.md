@@ -12,7 +12,7 @@ Several key assumptions were made to simplify the model and focus on the externa
 
 <br>
 
-**Formulas:**
+**Formula Section**
 (NOT COMPLETE)
 
 The concentration profile for species A in the reactor is given by:

@@ -5,3 +5,49 @@ The implementation combines numerical Euler method solutions and analytical conc
 <br>
 
 ![CL Image](cl2.png)
+
+The model simulates a Packed Bed Reactor (PBR) designed to remove chlorine gas (Cl₂) from a waste gas stream using solid absorbent granules. This reaction is external diffusion-limtied, where the rate of Cl₂ removal is controlled by mass transfer from the bulk gas to the absorbent surface. Chlorine flows through a tubular reactor at a superficial velocity determined by the volumetric flow rate, diffusing to the absorbent granule surfaces with a mass transfer coefficient kc. The instantaneous surface reaction (CAs ≈ 0) causes an exponential decrease in Cl₂ concentration along the reactor length. 
+
+Several key assumptions were made to simplify the model and focus on the external diffusion-limited process. Steady-state operation assumes constant flow and unchanging conditions over time, eliminating transient effects. Isothermal conditions mean the reactor maintains a uniform temperature, avoiding thermal gradients that could affect reaction rates. The reactor is assumed to be uniformly packed with spherical absorbent particles, characterized by a consistent porosity of ϕ = 0.4, which ensures predictable gas flow and surface area distribution. Negligible axial diffusion implies that Cl₂ transport along the reactor length occurs primarily by convection, not diffusion, simplifying the overall mass balance.
+
+<br>
+
+**Formulas:**
+(NOT COMPLETE)
+
+The concentration profile for species A in the reactor is given by:
+
+$$\frac{C_A}{C_{A0}} = (1 - X_A) = \exp\left(-\frac{k_c a_c z}{u}\right)$$
+
+
+The governing numerical differential equation:
+
+$$-u \frac{dC_A}{dz} = k_c a_c C_A$$
+
+
+Numerical solution using Euler's method:
+
+$$C[i] = C[i-1] - \frac{k_c a_c}{u} C[i-1] dz$$
+
+
+Grid spacing is defined as:
+
+$$dz = \frac{z}{N-1}$$
+
+Where z is the reactor length of 1.5 m and N = 50,000 (grid points)
+
+<br>
+
+The mass transfer coefficient is calculated using:
+
+$$k_c = 0.6 \frac{D_{AB}^{2/3}}{v^{1/6}} \frac{u^{1/2}}{d_p^{1/2}}$$
+
+
+The external surface area per unit volume is given by:
+
+$$a_c = \frac{6(1-\phi)}{d_p}$$
+
+Where:
+- $\phi$ is the void fraction (porosity)
+- $d_p$ is the particle diameter
+

@@ -13,8 +13,8 @@ Several key assumptions were made to simplify the model and focus on the externa
 <br>
 
 **Formula Section**
-(NOT COMPLETE)
-
+(not complete yet):
+---
 The concentration profile for species A in the reactor is given by:
 
 $$\frac{C_A}{C_{A0}} = (1 - X_A) = \exp\left(-\frac{k_c a_c z}{u}\right)$$
@@ -27,6 +27,7 @@ $$\frac{C_A}{C_{A0}} = (1 - X_A) = \exp\left(-\frac{k_c a_c z}{u}\right)$$
 - **z**: Axial position along the reactor length (m, ranging from 0 to 1.5 m).
 - **u**: Superficial gas velocity, proportional to the volumetric flow rate (m/s, e.g., 0.1 m/s for Case 1, 0.4 m/s for Case 2).
 
+---
 The governing numerical differential equation:
 
 $$-u \frac{dC_A}{dz} = k_c a_c C_A$$
@@ -37,6 +38,7 @@ $$-u \frac{dC_A}{dz} = k_c a_c C_A$$
 - **k<sub>c</sub>**: Mass transfer coefficient (m/s), as defined above.
 - **a<sub>v</sub>**: External surface area per unit reactor volume (m²/m³), as defined above.
 
+---
 Numerical solution using Euler's method:
 
 $$C[i] = C[i-1] - \frac{k_c a_c}{u} C[i-1] dz$$

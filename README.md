@@ -33,10 +33,10 @@ The governing numerical differential equation:
 $$-u \frac{dC_A}{dz} = k_c a_c C_A$$
 
 - **u**: Superficial gas velocity (m/s), as defined above.
-- **C<sub>A</sub>**: Cl₂ concentration at position z (mol/m³), as defined above.
+- **C<sub>A</sub>**: Concentration of Cl₂ at position z in the reactor (mol/m³).
 - **dC<sub>A</sub>/dz**: Rate of change of Cl₂ concentration along the reactor length (mol/m⁴).
-- **k<sub>c</sub>**: Mass transfer coefficient (m/s), as defined above.
-- **a<sub>v</sub>**: External surface area per unit reactor volume (m²/m³), as defined above.
+- **k<sub>c</sub>**: Mass transfer coefficient (m/s)
+- **a<sub>v</sub>**: External surface area per unit reactor volume (m²/m³)
 
 ---
 Numerical solution using Euler's method:
